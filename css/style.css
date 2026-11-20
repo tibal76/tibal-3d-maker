@@ -1,13 +1,14 @@
 :root {
-  --bg: #0f172a;
-  --bg-alt: #111c33;
-  --surface: #1e293b;
+  --bg: #07111f;
+  --bg-alt: #0b1a2c;
+  --surface: #10243a;
   --text: #f8fafc;
-  --muted: #cbd5e1;
-  --accent: #f97316;
-  --accent-hover: #ea580c;
-  --border: rgba(148, 163, 184, 0.2);
-  --radius: 12px;
+  --muted: #b8cadb;
+  --accent: #42d9ff;
+  --accent-hover: #19bfe9;
+  --accent-blue: #3d7cff;
+  --border: rgba(103, 210, 255, 0.16);
+  --radius: 14px;
   --container: 1120px;
 }
 
@@ -55,7 +56,7 @@ code {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(7, 17, 31, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -77,10 +78,11 @@ code {
 }
 
 .brand-logo {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
 
 .brand small {
@@ -101,6 +103,14 @@ code {
   color: var(--text);
 }
 
+.nav a:focus-visible,
+.brand:focus-visible,
+.btn:focus-visible,
+.filter-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -119,12 +129,13 @@ code {
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent));
+  color: #05111d;
+  box-shadow: 0 10px 30px rgba(66, 217, 255, 0.16);
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent));
 }
 
 .btn-secondary {
@@ -138,12 +149,50 @@ code {
 }
 
 .hero {
-  padding: 5.5rem 0 4.5rem;
-  background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.16), transparent 55%);
+  padding: 4.5rem 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 45%, rgba(66, 217, 255, 0.13), transparent 26rem),
+    linear-gradient(135deg, rgba(61, 124, 255, 0.04), transparent 48%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
 }
 
 .hero-content {
-  max-width: 720px;
+  max-width: 680px;
+}
+
+.hero-visual {
+  position: relative;
+  max-width: 420px;
+  justify-self: end;
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(66, 217, 255, 0.24), transparent 68%);
+  filter: blur(8px);
+}
+
+.hero-visual img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid rgba(66, 217, 255, 0.28);
+  border-radius: 22px;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.38),
+    0 0 40px rgba(66, 217, 255, 0.12);
 }
 
 .eyebrow {
@@ -218,7 +267,7 @@ code {
 .filter-btn.active,
 .filter-btn:hover {
   background: var(--accent);
-  color: #ffffff;
+  color: #05111d;
   border-color: var(--accent);
 }
 
@@ -233,6 +282,7 @@ code {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
@@ -260,6 +310,7 @@ code {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  border-bottom: 1px solid var(--border);
 }
 
 .project-body {
@@ -304,6 +355,29 @@ code {
 @media (max-width: 720px) {
   .header-inner {
     flex-direction: column;
-    padding: 0.75rem 0;
+    padding: 0.65rem 0;
+  }
+
+  .nav {
+    justify-content: center;
+    gap: 0.75rem 1rem;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .hero {
+    padding: 3.5rem 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    max-width: 300px;
+    justify-self: center;
   }
 }
