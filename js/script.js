@@ -49,8 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const selectedFilter = button.dataset.filter;
 
-      filterButtons.forEach((item) => item.classList.remove("active"));
-      button.classList.add("active");
+      filterButtons.forEach((item) => {
+        const isSelected = item === button;
+        item.classList.toggle("active", isSelected);
+        item.setAttribute("aria-pressed", String(isSelected));
+      });
 
       projectCards.forEach((card) => {
         const shouldShow =

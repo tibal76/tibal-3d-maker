@@ -6,9 +6,18 @@
   <meta name="theme-color" content="#07111f">
   <title>Tibal 3D Maker — Conception CAO & Impression 3D sur mesure</title>
   <meta name="description" content="Tibal 3D Maker conçoit et fabrique des pièces sur mesure autour de Saint-Pierre-lès-Elbeuf : modélisation CAO, impression 3D, prototypes et réparations.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tibal 3D Maker — Conception CAO & Impression 3D sur mesure">
+  <meta property="og:description" content="Modélisation CAO et impression 3D sur mesure autour de Saint-Pierre-lès-Elbeuf.">
+  <meta property="og:url" content="https://tibal76.github.io/tibal-3d-maker/">
+  <meta property="og:image" content="https://tibal76.github.io/tibal-3d-maker/assets/logo/logo-t3dm.jpeg">
+  <meta property="og:image:alt" content="Logo Tibal 3D Maker">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo/logo-t3dm.jpeg" type="image/jpeg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenu">Passer au contenu</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#accueil" aria-label="Tibal 3D Maker, retour à l'accueil">
@@ -36,7 +45,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="contenu">
     <section class="hero" id="accueil">
       <div class="hero-grid container">
         <div class="hero-content">
@@ -145,9 +154,9 @@
             <h2>Du besoin concret au résultat tangible.</h2>
           </div>
           <div class="filters" role="group" aria-label="Filtrer les réalisations">
-            <button class="filter-button active" type="button" data-filter="all">Tous</button>
-            <button class="filter-button" type="button" data-filter="fonctionnel">Fonctionnel</button>
-            <button class="filter-button" type="button" data-filter="personnel">Personnalisé</button>
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+            <button class="filter-button" type="button" data-filter="fonctionnel" aria-pressed="false">Fonctionnel</button>
+            <button class="filter-button" type="button" data-filter="personnel" aria-pressed="false">Personnalisé</button>
           </div>
         </div>
 
