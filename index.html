@@ -1,178 +1,335 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tibal 3D Maker (T3DM) — Modélisation CAO &amp; Impression 3D</title>
-  <meta
-    name="description"
-    content="Tibal 3D Maker (T3DM) : modélisation 3D sur mesure, prototypage, pièces fonctionnelles et impression 3D."
-  />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <title>Tibal 3D Maker — Conception CAO & Impression 3D sur mesure</title>
+  <meta name="description" content="Tibal 3D Maker conçoit et fabrique des pièces sur mesure autour de Saint-Pierre-lès-Elbeuf : modélisation CAO, impression 3D, prototypes et réparations.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#accueil" class="brand">
-        <img
-          src="assets/logo/logo-t3dm.jpeg"
-          alt="Logo Tibal 3D Maker"
-          class="brand-logo"
-          onerror="this.style.display='none'"
-        />
-        <span class="brand-name">Tibal 3D Maker <small>T3DM</small></span>
+      <a class="brand" href="#accueil" aria-label="Tibal 3D Maker, retour à l'accueil">
+        <img src="assets/logo/logo-t3dm.jpeg" alt="" class="brand-logo">
+        <span>
+          <strong>Tibal 3D Maker</strong>
+          <small>Conception & Fabrication</small>
+        </span>
       </a>
-      <nav class="nav">
-        <a href="#services">Services</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Ouvrir le menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Navigation principale">
+        <a href="#expertises">Expertises</a>
         <a href="#realisations">Réalisations</a>
-        <a href="#avis">Avis Google</a>
-        <a href="#contact" class="btn btn-primary">Devis &amp; Contact</a>
+        <a href="#methode">Méthode</a>
+        <a href="#apropos">À propos</a>
+        <a class="nav-cta" href="#contact">Parler de votre projet</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section id="accueil" class="hero">
-      <div class="container hero-grid">
+    <section class="hero" id="accueil">
+      <div class="hero-grid container">
         <div class="hero-content">
-          <p class="eyebrow">Modélisation 3D &amp; Impression 3D sur mesure</p>
-          <h1>Vos idées prennent forme en 3D, avec précision.</h1>
+          <p class="eyebrow"><span></span> Fabrication sur mesure — Normandie</p>
+          <h1>Vos contraintes deviennent <em>une solution.</em></h1>
           <p class="hero-lead">
-            Conception CAO paramétrique, réparation de pièces introuvables, objets personnalisés
-            et petites séries pour particuliers et professionnels.
+            Modélisation CAO et impression 3D pour transformer une idée,
+            remplacer une pièce introuvable ou créer une adaptation utile.
           </p>
           <div class="hero-actions">
-            <a href="#realisations" class="btn btn-primary">Voir les réalisations</a>
-            <a href="#contact" class="btn btn-secondary">Demander un devis</a>
+            <a class="button button-primary" href="#contact">
+              Demander une étude
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-ghost" href="#realisations">Voir les réalisations</a>
+          </div>
+          <ul class="hero-proof" aria-label="Informations clés">
+            <li><strong>Fusion 360</strong><span>Conception CAO</span></li>
+            <li><strong>Bambu Lab</strong><span>A1 & P2S</span></li>
+            <li><strong>Saint-Pierre-lès-Elbeuf</strong><span>Intervention locale</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Tibal 3D Maker">
+          <div class="visual-frame">
+            <img src="assets/logo/logo-t3dm.jpeg" alt="Logo Tibal 3D Maker — conception et impression 3D">
+          </div>
+          <div class="floating-tag tag-top">
+            <span class="tag-dot"></span>
+            <span>CAO paramétrique</span>
+          </div>
+          <div class="floating-tag tag-bottom">
+            <span class="tag-index">01</span>
+            <span>Pièce sur mesure</span>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <img src="assets/logo/logo-t3dm.jpeg" alt="" />
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Domaines d'intervention">
+      <div class="container trust-inner">
+        <p>Conception</p>
+        <span></span>
+        <p>Prototypage</p>
+        <span></span>
+        <p>Adaptation</p>
+        <span></span>
+        <p>Réparation</p>
+        <span></span>
+        <p>Personnalisation</p>
+      </div>
+    </section>
+
+    <section class="section" id="expertises">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">01 — Expertises</p>
+            <h2>Une solution pensée pour répondre à votre besoin.</h2>
+          </div>
+          <p>
+            Du simple adaptateur à la pièce technique complexe, chaque projet est étudié
+            selon son usage, ses dimensions et les contraintes de fabrication.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card featured">
+            <div class="card-number">01</div>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 5 41 15v20L24 43 7 35V15L24 5Z"/><path d="m7 15 17 10 17-10M24 25v18"/><path d="m15 10 17 10"/></svg>
+            </div>
+            <h3>Modélisation CAO</h3>
+            <p>Pièces techniques, boîtiers, supports et adaptations dessinés à partir de vos dimensions ou de votre pièce existante.</p>
+            <a href="#contact">Étudier une pièce <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="expertise-card">
+            <div class="card-number">02</div>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M10 39h28M14 39V9h20v30M18 14h12v8H18zM22 22v17M26 22v17"/></svg>
+            </div>
+            <h3>Impression 3D</h3>
+            <p>Prototypes et pièces fonctionnelles fabriqués avec le filament adapté à l’usage, à l’esthétique et au niveau de contrainte.</p>
+            <a href="#contact">Estimer une fabrication <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="expertise-card">
+            <div class="card-number">03</div>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><path d="M24 9v30M9 24h30"/><circle cx="24" cy="24" r="5"/></svg>
+            </div>
+            <h3>Pièces & objets sur mesure</h3>
+            <p>Remplacement de pièces cassées, accessoires pratiques, créations personnelles et petites séries réalisées avec précision.</p>
+            <a href="#contact">Décrire votre besoin <span aria-hidden="true">→</span></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section class="section section-dark" id="realisations">
       <div class="container">
-        <h2>Services</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Modélisation CAO 3D</h3>
-            <p>
-              Création de pièces techniques, supports, boîtiers et adaptations sur mesure à partir
-              de cotes, croquis ou pièces existantes.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Impression 3D sur mesure</h3>
-            <p>
-              Impression de prototypes et pièces fonctionnelles adaptées à l'usage (résistance
-              mécanique, esthétique, intérieur ou extérieur).
-            </p>
-          </article>
-          <article class="card">
-            <h3>Pièces &amp; objets personnalisés</h3>
-            <p>
-              Remplacement de pièces cassées, accessoires pratiques, cadeaux personnalisés et
-              petites séries soignées.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="realisations" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Réalisations</h2>
+        <div class="section-heading section-heading-light">
+          <div>
+            <p class="section-kicker">02 — Réalisations</p>
+            <h2>Du besoin concret au résultat tangible.</h2>
+          </div>
           <div class="filters" role="group" aria-label="Filtrer les réalisations">
-            <button type="button" class="filter-btn active" data-filter="all">Tout</button>
-            <button type="button" class="filter-btn" data-filter="cao">Modélisation CAO</button>
-            <button type="button" class="filter-btn" data-filter="fonctionnel">Pièces fonctionnelles</button>
-            <button type="button" class="filter-btn" data-filter="perso">Personnalisé</button>
+            <button class="filter-button active" type="button" data-filter="all">Tous</button>
+            <button class="filter-button" type="button" data-filter="fonctionnel">Fonctionnel</button>
+            <button class="filter-button" type="button" data-filter="personnel">Personnalisé</button>
           </div>
         </div>
 
-        <div class="grid-3 gallery">
-          <article class="card project-card" data-category="fonctionnel">
-            <img
-              src="assets/realizations/exemple-1.jpg"
-              alt="Exemple de pièce fonctionnelle imprimée en 3D"
-              onerror="this.src='https://placehold.co/600x400/1e293b/f8fafc?text=Photo+T3DM+1'"
-            />
-            <div class="project-body">
-              <span class="badge">Pièces fonctionnelles</span>
-              <h3>Support &amp; adaptation sur mesure</h3>
-              <p>Ajoutez vos photos dans <code>assets/realizations/</code> et mettez à jour la fiche.</p>
+        <div class="projects-grid">
+          <article class="project-card project-featured" data-category="fonctionnel">
+            <div class="project-visual visual-bracket" aria-hidden="true">
+              <div class="project-lines"></div>
+              <span class="cad-label">ADAPTATION / 01</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-type">Pièce fonctionnelle</p>
+              <h3>Support déporté pour sèche-serviettes</h3>
+              <p>Conception d’une adaptation sur mesure à partir des contraintes d’espacement, de fixation et d’utilisation.</p>
+              <ul>
+                <li>Mesure sur site</li>
+                <li>Modélisation sur mesure</li>
+                <li>Pièce fonctionnelle</li>
+              </ul>
             </div>
           </article>
 
-          <article class="card project-card" data-category="cao">
-            <img
-              src="assets/realizations/exemple-2.jpg"
-              alt="Exemple de conception CAO 3D"
-              onerror="this.src='https://placehold.co/600x400/1e293b/f8fafc?text=Photo+T3DM+2'"
-            />
-            <div class="project-body">
-              <span class="badge">Modélisation CAO</span>
-              <h3>Conception paramétrique</h3>
-              <p>Modélisation précise avec tolérances adaptées à l'assemblage.</p>
+          <article class="project-card" data-category="personnel">
+            <div class="project-visual visual-dvd" aria-hidden="true">
+              <div class="dvd-discs">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <span class="cad-label">RANGEMENT / 02</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-type">Création personnalisée</p>
+              <h3>Présentoir DVD sur mesure</h3>
+              <p>Organisation pratique adaptée à une collection et aux dimensions disponibles.</p>
             </div>
           </article>
 
-          <article class="card project-card" data-category="perso">
-            <img
-              src="assets/realizations/exemple-3.jpg"
-              alt="Exemple de création personnalisée"
-              onerror="this.src='https://placehold.co/600x400/1e293b/f8fafc?text=Photo+T3DM+3'"
-            />
-            <div class="project-body">
-              <span class="badge">Personnalisé</span>
-              <h3>Création sur mesure</h3>
-              <p>Objets et séries personnalisées selon votre cahier des charges.</p>
+          <article class="project-card" data-category="personnel">
+            <div class="project-visual visual-lithophane" aria-hidden="true">
+              <div class="lithophane-panel">
+                <span class="lithophane-orbit"></span>
+              </div>
+              <span class="cad-label">PERSONNALISÉ / 03</span>
+            </div>
+            <div class="project-copy">
+              <p class="project-type">Objet personnalisé</p>
+              <h3>Cadre lithophane</h3>
+              <p>Cadre unique mettant une image en relief grâce à la variation d’épaisseur du matériau.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="avis" class="section">
-      <div class="container reviews-box">
-        <h2>Avis Google</h2>
-        <p>
-          Retrouvez les retours clients et laissez votre avis sur la fiche Google de
-          <strong>Tibal 3D Maker</strong>.
-        </p>
-        <div class="reviews-actions">
-          <a id="google-reviews-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            Voir &amp; laisser un avis Google
-          </a>
+    <section class="section" id="methode">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">03 — Méthode</p>
+            <h2>Un parcours clair, de l’idée à la pièce.</h2>
+          </div>
+          <p>
+            Chaque demande est étudiée avec soin avant fabrication afin d’aligner faisabilité,
+            qualité, durée de réalisation et budget.
+          </p>
+        </div>
+
+        <ol class="process-list">
+          <li>
+            <span>01</span>
+            <div><h3>Votre besoin</h3><p>Description, photos, mesures ou pièce existante.</p></div>
+          </li>
+          <li>
+            <span>02</span>
+            <div><h3>Étude technique</h3><p>Faisabilité, matière, contraintes et options possibles.</p></div>
+          </li>
+          <li>
+            <span>03</span>
+            <div><h3>Conception CAO</h3><p>Modélisation précise puis validation avant fabrication.</p></div>
+          </li>
+          <li>
+            <span>04</span>
+            <div><h3>Fabrication</h3><p>Préparation, impression et contrôle de la pièce finale.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="about-section" id="apropos">
+      <div class="container about-grid">
+        <div class="about-mark" aria-hidden="true">
+          <img src="assets/logo/logo-t3dm.jpeg" alt="">
+          <div class="about-ring"></div>
+        </div>
+        <div class="about-copy">
+          <p class="section-kicker">04 — À propos</p>
+          <h2>La précision de l’aéronautique au service de vos projets.</h2>
+          <p>
+            Issu du métier d’ajusteur aéronautique, j’ai développé une exigence naturelle :
+            comprendre les contraintes, travailler avec précision et ne pas laisser un problème sans solution.
+          </p>
+          <p>
+            Aujourd’hui, cette expérience guide Tibal 3D Maker. Mon objectif est simple :
+            concevoir des objets utiles, réparer ce qui peut l’être et vous proposer des solutions
+            adaptées plutôt que standardisées.
+          </p>
+          <div class="about-signature">
+            <span>Saint-Pierre-lès-Elbeuf</span>
+            <strong>Tibal 3D Maker</strong>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section section-alt">
-      <div class="container contact-box">
-        <h2>Contact &amp; Devis</h2>
-        <p>
-          Envoyez une description de votre besoin, vos dimensions ou vos photos pour obtenir une
-          estimation.
-        </p>
-        <div class="contact-links">
-          <a id="contact-email-link" href="mailto:tibal76@proton.me" class="btn btn-primary">
-            Écrire par e-mail
-          </a>
-          <a id="social-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            Réseaux / Profil T3DM
-          </a>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="section-kicker">05 — Démarrer un projet</p>
+          <h2>Une pièce à remplacer ou une idée à concrétiser ?</h2>
+          <p>Envoyez les éléments disponibles : nous étudierons ensemble la solution la plus adaptée.</p>
+          <ul class="contact-details">
+            <li>
+              <span>E-mail</span>
+              <a href="mailto:tibal76@proton.me">tibal76@proton.me</a>
+            </li>
+            <li>
+              <span>Zone</span>
+              <p>Saint-Pierre-lès-Elbeuf + 30 km</p>
+            </li>
+            <li>
+              <span>TikTok</span>
+              <a href="https://www.tiktok.com/@tibal.3d.maker" target="_blank" rel="noopener noreferrer">@tibal.3d.maker ↗</a>
+            </li>
+          </ul>
         </div>
+
+        <form class="quote-form" id="quote-form">
+          <div class="form-row">
+            <label>
+              Votre nom
+              <input type="text" name="name" autocomplete="name" required placeholder="Nom ou entreprise">
+            </label>
+            <label>
+              Votre e-mail
+              <input type="email" name="email" autocomplete="email" required placeholder="vous@example.fr">
+            </label>
+          </div>
+          <label>
+            Type de projet
+            <select name="project" required>
+              <option value="" selected disabled>Choisir une prestation</option>
+              <option>Pièce de remplacement</option>
+              <option>Modélisation CAO</option>
+              <option>Prototypage</option>
+              <option>Objet personnalisé</option>
+              <option>Petite série</option>
+              <option>Conseil technique</option>
+              <option>Autre besoin</option>
+            </select>
+          </label>
+          <label>
+            Décrivez votre besoin
+            <textarea name="message" rows="5" required placeholder="Dimensions, contraintes, objet existant, usage prévu…"></textarea>
+          </label>
+          <button class="button button-primary form-submit" type="submit">
+            Envoyer ma demande
+            <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-note">La demande s’ouvrira dans votre logiciel de messagerie.</p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Tibal 3D Maker (T3DM) — Tous droits réservés.</p>
+      <div>
+        <a class="brand footer-brand" href="#accueil">
+          <img src="assets/logo/logo-t3dm.jpeg" alt="" class="brand-logo">
+          <span><strong>Tibal 3D Maker</strong><small>Conception & Fabrication</small></span>
+        </a>
+      </div>
+      <p>© <span id="year"></span> Tibal 3D Maker — Tous droits réservés.</p>
+      <a href="#accueil">Retour en haut ↑</a>
     </div>
   </footer>
 

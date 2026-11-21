@@ -1,49 +1,83 @@
-// Centralisez ici vos liens externes pour les mettre à jour en un seul endroit
 const SITE_CONFIG = {
   email: "tibal76@proton.me",
-  googleReviewsUrl: "https://g.page/r/VOTRE-LIEN-AVIS-GOOGLE",
-  socialUrl: "https://github.com/tibal76"
+  tiktokUrl: "https://www.tiktok.com/@tibal.3d.maker"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Année courante dans le pied de page
-  const yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
-
-  // Liens d'avis Google, e-mail et réseaux
-  const googleReviewsLink = document.getElementById("google-reviews-link");
-  if (googleReviewsLink && SITE_CONFIG.googleReviewsUrl) {
-    googleReviewsLink.href = SITE_CONFIG.googleReviewsUrl;
-  }
-
-  const emailLink = document.getElementById("contact-email-link");
-  if (emailLink && SITE_CONFIG.email) {
-    emailLink.href = `mailto:${SITE_CONFIG.email}`;
-  }
-
-  const socialLink = document.getElementById("social-link");
-  if (socialLink && SITE_CONFIG.socialUrl) {
-    socialLink.href = SITE_CONFIG.socialUrl;
-  }
-
-  // Filtrage des réalisations
-  const filterButtons = document.querySelectorAll(".filter-btn");
+  const header = document.querySelector(".site-header");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
+  const yearElement = document.getElementById("year");
+  const filterButtons = document.querySelectorAll(".filter-button");
   const projectCards = document.querySelectorAll(".project-card");
+  const quoteForm = document.getElementById("quote-form");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  const updateHeader = () => {
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+    }
+  };
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.querySelector(".sr-only").textContent = isOpen
+        ? "Fermer le menu"
+        : "Ouvrir le menu";
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.querySelector(".sr-only").textContent = "Ouvrir le menu";
+      });
+    });
+  }
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const selectedFilter = button.dataset.filter;
 
-      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      filterButtons.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
 
       projectCards.forEach((card) => {
-        const category = card.dataset.category;
-        const shouldShow = selectedFilter === "all" || category === selectedFilter;
+        const shouldShow =
+          selectedFilter === "all" || card.dataset.category === selectedFilter;
         card.classList.toggle("hidden", !shouldShow);
       });
     });
   });
+
+  if (quoteForm) {
+    quoteForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!quoteForm.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(quoteForm);
+      const name = formData.get("name").toString().trim();
+      const email = formData.get("email").toString().trim();
+      const project = formData.get("project").toString().trim();
+      const message = formData.get("message").toString().trim();
+
+      const subject = encodeURIComponent(`Demande de projet — ${project}`);
+      const body = encodeURIComponent(
+        `Nom / entreprise : ${name}\nE-mail : ${email}\n\nType de projet : ${project}\n\nBesoin :\n${message}`
+      );
+
+      window.location.href = `mailto:${SITE_CONFIG.email}?subject=${subject}&body=${body}`;
+    });
+  }
 });
