@@ -98,7 +98,7 @@ Les projets peuvent également être étudiés à distance selon leur nature.
 
 Pour obtenir une estimation, transmettez :
 
-- Une description ou une photo du besoin
+- Une description du besoin ; les photos peuvent être échangées par e-mail après un premier contact
 - Les dimensions utiles
 - Votre contrainte principale : réparation, adaptation, esthétique ou résistance
 - Une date souhaitée, si elle est importante

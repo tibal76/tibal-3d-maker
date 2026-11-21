@@ -65,20 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     quoteForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
-      if (!quoteForm.reportValidity()) {
-        return;
-      }
-
-      const attachmentInput = quoteForm.querySelector('input[type="file"]');
-      const attachment = attachmentInput.files[0];
-      if (attachment && attachment.size > 10 * 1000 * 1000) {
-        formStatus.classList.remove("notice");
-        formStatus.classList.add("error");
-        formStatus.textContent = "Le fichier dépasse la limite de 10 Mo. Choisissez un fichier plus léger.";
-        attachmentInput.focus();
-        return;
-      }
-
       const submitButton = quoteForm.querySelector('button[type="submit"]');
       submitButton.disabled = true;
       formStatus.classList.remove("error", "notice");

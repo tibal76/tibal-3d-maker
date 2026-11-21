@@ -216,7 +216,7 @@
         <ol class="process-list">
           <li>
             <span>01</span>
-            <div><h3>Votre besoin</h3><p>Description, photos, mesures ou pièce existante.</p></div>
+            <div><h3>Votre besoin</h3><p>Description, mesures et contexte d’usage. Les photos pourront être échangées après un premier contact.</p></div>
           </li>
           <li>
             <span>02</span>
@@ -266,7 +266,7 @@
         <div class="contact-copy">
           <p class="section-kicker">05 — Démarrer un projet</p>
           <h2>Une pièce à remplacer ou une idée à concrétiser ?</h2>
-          <p>Envoyez les éléments disponibles : nous étudierons ensemble la solution la plus adaptée.</p>
+          <p>Décrivez votre besoin : nous pourrons ensuite échanger des photos ou des fichiers par e-mail si cela aide à étudier votre projet.</p>
           <ul class="contact-details">
             <li>
               <span>E-mail</span>
@@ -283,7 +283,7 @@
           </ul>
         </div>
 
-        <form class="quote-form" id="quote-form" method="POST" enctype="multipart/form-data">
+        <form class="quote-form" id="quote-form" method="POST">
           <input type="hidden" name="_subject" value="Nouvelle demande de devis — Tibal 3D Maker">
           <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-row">
@@ -313,23 +313,13 @@
             Décrivez votre besoin
             <textarea name="message" rows="5" required placeholder="Dimensions, contraintes, objet existant, usage prévu…"></textarea>
           </label>
-          <label class="file-upload">
-            Joindre une photo ou un document (facultatif)
-            <input
-              type="file"
-              name="attachment"
-              accept=".jpg,.jpeg,.png,.webp,.pdf,image/jpeg,image/png,image/webp,application/pdf"
-              aria-describedby="attachment-note"
-            >
-            <span class="file-note" id="attachment-note">JPG, PNG, WebP ou PDF — 10 Mo maximum.</span>
-          </label>
           <button class="button button-primary form-submit" type="submit">
             Envoyer ma demande
             <span aria-hidden="true">↗</span>
           </button>
           <p class="form-note" id="form-note">
-            Vos informations sont transmises via FormSubmit pour acheminer votre demande.
-            N’envoyez pas d’informations sensibles.
+            Votre demande est transmise via FormSubmit. Les photos ou fichiers pourront être échangés
+            par e-mail après ce premier contact. N’envoyez pas d’informations sensibles.
           </p>
           <p class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
           <noscript>
