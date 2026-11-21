@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const submitButton = quoteForm.querySelector('button[type="submit"]');
       submitButton.disabled = true;
-      formStatus.classList.remove("error");
+      formStatus.classList.remove("error", "notice");
       formStatus.textContent = "Envoi de votre demande…";
 
       try {
@@ -82,7 +82,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         const result = await response.json();
 
-        if (!response.ok || result.success !== "true") {
+        if (!response.ok) {
+          throw new Error(result.message || "Le service de formulaire a refusé la demande.");
+        }
+
+        if (result.success !== "true") {
+          if (result.message && result.message.toLowerCase().includes("activation")) {
+            formStatus.classList.add("notice");
+            formStatus.textContent =
+              "FormSubmit attend l’activation de l’adresse de réception. Consultez tibal76@proton.me, y compris les courriers indésirables, puis cliquez sur le lien d’activation.";
+            return;
+          }
+
           throw new Error(result.message || "Le service de formulaire a refusé la demande.");
         }
 
