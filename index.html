@@ -282,7 +282,9 @@
           </ul>
         </div>
 
-        <form class="quote-form" id="quote-form">
+        <form class="quote-form" id="quote-form" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis — Tibal 3D Maker">
+          <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-row">
             <label>
               Votre nom
@@ -314,7 +316,14 @@
             Envoyer ma demande
             <span aria-hidden="true">↗</span>
           </button>
-          <p class="form-note">La demande s’ouvrira dans votre logiciel de messagerie.</p>
+          <p class="form-note" id="form-note">
+            Vos informations sont transmises via FormSubmit pour acheminer votre demande.
+            N’envoyez pas d’informations sensibles.
+          </p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <noscript>
+            <p class="form-note">Activez JavaScript ou contactez-moi directement par e-mail.</p>
+          </noscript>
         </form>
       </div>
     </section>

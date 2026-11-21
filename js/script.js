@@ -1,5 +1,6 @@
 const SITE_CONFIG = {
   email: "tibal76@proton.me",
+  formEndpoint: "https://formsubmit.co/ajax/tibal76@proton.me",
   tiktokUrl: "https://www.tiktok.com/@tibal.3d.maker"
 };
 
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-button");
   const projectCards = document.querySelectorAll(".project-card");
   const quoteForm = document.getElementById("quote-form");
+  const formStatus = document.getElementById("form-status");
 
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
@@ -59,25 +61,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (quoteForm) {
-    quoteForm.addEventListener("submit", (event) => {
+    quoteForm.action = SITE_CONFIG.formEndpoint;
+    quoteForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       if (!quoteForm.reportValidity()) {
         return;
       }
 
-      const formData = new FormData(quoteForm);
-      const name = formData.get("name").toString().trim();
-      const email = formData.get("email").toString().trim();
-      const project = formData.get("project").toString().trim();
-      const message = formData.get("message").toString().trim();
+      const submitButton = quoteForm.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      formStatus.classList.remove("error");
+      formStatus.textContent = "Envoi de votre demande…";
 
-      const subject = encodeURIComponent(`Demande de projet — ${project}`);
-      const body = encodeURIComponent(
-        `Nom / entreprise : ${name}\nE-mail : ${email}\n\nType de projet : ${project}\n\nBesoin :\n${message}`
-      );
+      try {
+        const response = await fetch(quoteForm.action, {
+          method: "POST",
+          body: new FormData(quoteForm),
+          headers: { Accept: "application/json" }
+        });
+        const result = await response.json();
 
-      window.location.href = `mailto:${SITE_CONFIG.email}?subject=${subject}&body=${body}`;
+        if (!response.ok || result.success !== "true") {
+          throw new Error(result.message || "Le service de formulaire a refusé la demande.");
+        }
+
+        quoteForm.reset();
+        formStatus.textContent = "Votre demande a bien été transmise. Merci, je reviendrai vers vous rapidement.";
+      } catch (error) {
+        console.error("Échec de l’envoi de la demande de devis.", error);
+        formStatus.classList.add("error");
+        formStatus.textContent =
+          "L’envoi a échoué. Réessayez ou contactez-moi directement par e-mail.";
+      } finally {
+        submitButton.disabled = false;
+      }
     });
   }
 });
