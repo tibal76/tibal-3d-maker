@@ -1,0 +1,7 @@
+# Environnement Python local
+.venv/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+Desktop.ini
