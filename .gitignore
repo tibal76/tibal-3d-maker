@@ -5,3 +5,6 @@
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Documents professionnels privés (jamais versionnés)
+/gestion-privee/
