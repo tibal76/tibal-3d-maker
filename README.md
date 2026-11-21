@@ -20,11 +20,11 @@ Du dessin 3D à la pièce imprimée : réparations, adaptations, prototypes et c
 
 ## À propos
 
-Ancien ajusteur aéronautique, j'ai changé de voie pour construire une activité tournée vers la création, la réparation et la fabrication sur mesure.
+Mon parcours relie métiers manuels et techniques : aide-charpentier, formation en maintenance industrielle (bac pro MSMA), puis ajustage aéronautique. Aujourd'hui maroquinier, j'effectue aussi des missions en impression 3D pour développer des outils ergonomiques.
 
-Cette expérience m'a appris à comprendre les contraintes techniques, travailler avec précision et trouver des solutions adaptées à chaque besoin. Aujourd'hui, j'utilise cette rigueur pour concevoir des pièces pratiques, remplacer des éléments introuvables et transformer une idée en objet réel.
+Ces expériences nourrissent une même approche : comprendre les contraintes d'un usage, travailler avec précision et concevoir des solutions adaptées. Avec Tibal 3D Maker, je mets cette polyvalence au service de pièces et d'objets sur mesure.
 
-**Tibal 3D Maker**, c'est une approche simple : observer le problème, modéliser la solution, puis fabriquer une pièce adaptée.
+**Tibal 3D Maker**, c'est une approche simple : observer le besoin, modéliser une solution, puis fabriquer une pièce adaptée.
 
 ---
 
