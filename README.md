@@ -60,6 +60,10 @@ Chaque projet suit un parcours clair, adapté à son usage, ses dimensions et se
 
 Paire de supports triangulaires en PETG conçus sur mesure. Ils accueillent une tringle en tube aluminium de 10 mm et favorisent le rayonnement de la chaleur ainsi que le séchage des serviettes.
 
+### Supports de tringle pour douche
+
+Paire de supports en PETG noir mat posés sur une paroi vitrée de douche. Ils accueillent une tringle en tube aluminium de 10 mm pour suspendre les serviettes.
+
 ### Présentoir DVD
 
 Présentoir sur mesure pour maintenir un boîtier de DVD en position verticale, imprimé en PLA noir mat.
