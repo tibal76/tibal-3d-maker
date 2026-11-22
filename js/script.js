@@ -1,6 +1,5 @@
 const SITE_CONFIG = {
   email: "tibal76@proton.me",
-  formEndpoint: "https://formsubmit.co/ajax/tibal76@proton.me",
   instagramUrl: "https://www.instagram.com/tibal.3d.maker/",
   facebookUrl: "https://www.facebook.com/tibal.3d.maker/",
   tiktokUrl: "https://www.tiktok.com/@tibal.3d.maker"
@@ -71,49 +70,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (quoteForm) {
-    quoteForm.action = SITE_CONFIG.formEndpoint;
-    quoteForm.addEventListener("submit", async (event) => {
+    quoteForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const submitButton = quoteForm.querySelector('button[type="submit"]');
-      submitButton.disabled = true;
+      const formData = new FormData(quoteForm);
+      const message = [
+        "Bonjour,",
+        "",
+        "Je vous contacte pour une demande préliminaire de projet.",
+        "",
+        `Nom : ${formData.get("name")}`,
+        `E-mail : ${formData.get("email")}`,
+        `Type de projet : ${formData.get("project")}`,
+        "",
+        "Description du besoin :",
+        formData.get("message"),
+        "",
+        "Photos ou fichiers joints : à ajouter dans votre messagerie."
+      ].join("\r\n");
+      const subject = "Demande préliminaire de projet — Tibal 3D Maker";
+      const mailtoUrl =
+        `mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(message)}`;
+
       formStatus.classList.remove("error", "notice");
-      formStatus.textContent = "Envoi de votre demande…";
-
-      try {
-        const response = await fetch(quoteForm.action, {
-          method: "POST",
-          body: new FormData(quoteForm),
-          headers: { Accept: "application/json" }
-        });
-        const result = await response.json();
-
-        if (!response.ok) {
-          throw new Error(result.message || "Le service de formulaire a refusé la demande.");
-        }
-
-        if (result.success !== "true") {
-          if (result.message && result.message.toLowerCase().includes("activation")) {
-            formStatus.classList.add("notice");
-            formStatus.textContent =
-              "FormSubmit attend l’activation de l’adresse de réception. Consultez tibal76@proton.me, y compris les courriers indésirables, puis cliquez sur le lien d’activation.";
-            return;
-          }
-
-          throw new Error(result.message || "Le service de formulaire a refusé la demande.");
-        }
-
-        quoteForm.reset();
-        formStatus.textContent =
-          "Votre demande préliminaire a bien été transmise. Merci pour votre intérêt pour le lancement de l’activité.";
-      } catch (error) {
-        console.error("Échec de l’envoi de la demande préliminaire.", error);
-        formStatus.classList.add("error");
-        formStatus.textContent =
-          "L’envoi a échoué. Réessayez ou contactez-moi directement par e-mail.";
-      } finally {
-        submitButton.disabled = false;
-      }
+      formStatus.textContent =
+        "Votre application de messagerie va s’ouvrir avec la demande préremplie. Ajoutez vos fichiers avant de l’envoyer.";
+      window.location.href = mailtoUrl;
     });
   }
 });

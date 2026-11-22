@@ -79,7 +79,7 @@ Le site vitrine est conçu pour présenter l'activité et faciliter le premier c
 - Une galerie filtrable par type de réalisation
 - Des liens directs vers Instagram, Facebook et TikTok dans le menu, y compris sur mobile
 - Un bouton de retour en haut de page qui apparaît pendant le défilement
-- Un formulaire de demandes préliminaires transmis par FormSubmit ; les photos et fichiers sont échangés ensuite par e-mail
+- Un formulaire de demandes préliminaires qui prépare un e-mail via la messagerie du visiteur ; les photos et fichiers peuvent être ajoutés manuellement avant l’envoi
 - Une activité en préparation : les demandes permettent de présenter un projet, mais aucune commande n’est acceptée pour le moment
 - Une mise en page responsive, des repères de focus clavier et des éléments HTML sémantiques
 - Des métadonnées pour le référencement et l'aperçu lors du partage du site
