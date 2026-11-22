@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".nav");
+  const backToTop = document.getElementById("back-to-top");
   const yearElement = document.getElementById("year");
   const filterButtons = document.querySelectorAll(".filter-button");
   const projectCards = document.querySelectorAll(".project-card");
@@ -23,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateHeader = () => {
     if (header) {
       header.classList.toggle("scrolled", window.scrollY > 40);
+    }
+
+    if (backToTop) {
+      backToTop.hidden = window.scrollY < 600;
     }
   };
 

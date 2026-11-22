@@ -163,6 +163,10 @@ textarea {
   gap: 8px;
 }
 
+.header-actions {
+  display: none;
+}
+
 .social-link {
   display: inline-grid;
   width: 36px;
@@ -207,6 +211,35 @@ textarea {
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 25;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(7, 17, 31, 0.16);
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.back-to-top[hidden] {
+  display: none;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: #72e5ff;
 }
 
 .nav-cta {
@@ -1166,17 +1199,23 @@ textarea {
     padding: 13px 12px;
   }
 
-  .nav-socials {
-    justify-content: center;
-    margin: 8px 0;
-    border-block: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px;
+  .nav > .nav-socials {
+    display: none;
   }
 
-  .nav .social-link {
-    width: 40px;
-    height: 40px;
-    padding: 0;
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mobile-socials {
+    gap: 4px;
+  }
+
+  .mobile-socials .social-link {
+    width: 36px;
+    height: 36px;
   }
 
   .nav-cta {
@@ -1240,6 +1279,7 @@ textarea {
 
   .header-inner {
     min-height: 72px;
+    gap: 8px;
   }
 
   .brand-logo {
@@ -1435,8 +1475,21 @@ textarea {
     margin-top: 36px;
   }
 
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+  }
+
   .trust-inner p {
     font-size: 0.58rem;
+  }
+
+  @media (max-width: 360px) {
+    .brand > span {
+      display: none;
+    }
   }
 
   .trust-inner p:nth-of-type(n+3),
