@@ -1139,10 +1139,73 @@ textarea {
   color: var(--white);
 }
 
-.footer-inner > a {
+.footer-links {
+  display: flex;
   justify-self: end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 16px;
+}
+
+.footer-links a {
   color: var(--cyan);
   font-weight: 750;
+}
+
+.legal-document {
+  width: min(860px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+.legal-document .section-kicker {
+  color: #147c9b;
+}
+
+.legal-document h1 {
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.legal-document .legal-updated {
+  margin-bottom: 36px;
+  color: var(--muted);
+}
+
+.legal-document section + section {
+  margin-top: 32px;
+}
+
+.legal-document h2 {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 1.25rem;
+}
+
+.legal-document p + p,
+.legal-document ul + p {
+  margin-top: 12px;
+}
+
+.legal-document ul {
+  padding-left: 24px;
+}
+
+.legal-document li + li {
+  margin-top: 6px;
+}
+
+.legal-document a {
+  color: #126b91;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-document a:focus-visible,
+.footer-links a:focus-visible {
+  outline-color: var(--blue);
 }
 
 :focus-visible {
@@ -1449,8 +1512,9 @@ textarea {
     padding: 24px 0;
   }
 
-  .footer-inner > a {
+  .footer-links {
     justify-self: start;
+    justify-content: flex-start;
   }
 }
 

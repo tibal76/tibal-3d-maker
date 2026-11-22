@@ -104,9 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         quoteForm.reset();
-        formStatus.textContent = "Votre demande a bien été transmise. Merci, je reviendrai vers vous rapidement.";
+        formStatus.textContent =
+          "Votre demande préliminaire a bien été transmise. Merci pour votre intérêt pour le lancement de l’activité.";
       } catch (error) {
-        console.error("Échec de l’envoi de la demande de devis.", error);
+        console.error("Échec de l’envoi de la demande préliminaire.", error);
         formStatus.classList.add("error");
         formStatus.textContent =
           "L’envoi a échoué. Réessayez ou contactez-moi directement par e-mail.";

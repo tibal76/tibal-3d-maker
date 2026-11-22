@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title description">
+  <title id="title">De l'idée à la pièce</title>
+  <desc id="description">Cinq étapes : votre besoin, l'étude technique, la conception CAO, l'impression 3D et le contrôle final.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#10243a"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 8 4 0 8" fill="none" stroke="#42d9ff" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="400" rx="22" fill="url(#background)"/>
+  <path d="M32 34h34" stroke="#42d9ff" stroke-width="3" stroke-linecap="round"/>
+  <text x="32" y="67" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="750">DE L'IDÉE À LA PIÈCE</text>
+  <text x="32" y="91" fill="#9eb2c5" font-family="Inter, Segoe UI, sans-serif" font-size="14">Un parcours clair, de l'étude à la fabrication sur mesure.</text>
+
+  <g fill="none" stroke="#42d9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+    <path d="M238 237h16" marker-end="url(#arrow)"/>
+    <path d="M469 237h16" marker-end="url(#arrow)"/>
+    <path d="M700 237h16" marker-end="url(#arrow)"/>
+    <path d="M931 237h16" marker-end="url(#arrow)"/>
+  </g>
+
+  <g transform="translate(30 112)">
+    <rect width="208" height="250" rx="16" fill="#0d2034" stroke="#24445c"/>
+    <text x="18" y="30" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">01 / BESOIN</text>
+    <g transform="translate(78 54)" fill="none" stroke="#42d9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+      <path d="M5 8h44a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H29L15 56v-10H5a8 8 0 0 1-8-8V16a8 8 0 0 1 8-8Z"/>
+      <path d="M12 23h30M12 33h22"/>
+    </g>
+    <text x="104" y="169" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Votre besoin</text>
+    <text x="104" y="198" text-anchor="middle" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="104">Usage, mesures</tspan>
+      <tspan x="104" dy="19">et photos utiles</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(261 112)">
+    <rect width="208" height="250" rx="16" fill="#0d2034" stroke="#24445c"/>
+    <text x="18" y="30" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">02 / ÉTUDE</text>
+    <g transform="translate(78 57)" fill="none" stroke="#42d9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+      <path d="M6 4v48M14 4v10M14 28v8M14 46v6M22 4v10M22 28v8M22 46v6M30 4v10M30 28v8M30 46v6M38 4v48"/>
+      <path d="M3 4h38M3 52h38"/>
+    </g>
+    <text x="104" y="169" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Étude technique</text>
+    <text x="104" y="198" text-anchor="middle" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="104">Faisabilité, matière</tspan>
+      <tspan x="104" dy="19">et contraintes</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(492 112)">
+    <rect width="208" height="250" rx="16" fill="#0d2034" stroke="#24445c"/>
+    <text x="18" y="30" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">03 / CONCEPTION</text>
+    <g transform="translate(78 56)" fill="none" stroke="#42d9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+      <path d="m30 3 26 15v30L30 63 4 48V18L30 3Z"/>
+      <path d="m4 18 26 15 26-15M30 33v30"/>
+      <path d="m17 10 26 15"/>
+    </g>
+    <text x="104" y="169" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Conception CAO</text>
+    <text x="104" y="198" text-anchor="middle" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="104">Modèle précis</tspan>
+      <tspan x="104" dy="19">sur Fusion 360</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(723 112)">
+    <rect width="208" height="250" rx="16" fill="#0d2034" stroke="#24445c"/>
+    <text x="18" y="30" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">04 / FABRICATION</text>
+    <g transform="translate(78 55)" fill="none" stroke="#42d9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+      <path d="M8 5h44v11H8zM13 16v39h34V16M20 24h20v12H20z"/>
+      <path d="M25 36v19M35 36v19M5 55h50"/>
+      <path d="M29 5V1h4v4"/>
+    </g>
+    <text x="104" y="169" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Impression 3D</text>
+    <text x="104" y="198" text-anchor="middle" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="104">Préparation et</tspan>
+      <tspan x="104" dy="19">fabrication</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(954 112)">
+    <rect width="208" height="250" rx="16" fill="#0d2034" stroke="#24445c"/>
+    <text x="18" y="30" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="800" letter-spacing="1.5">05 / VALIDATION</text>
+    <g transform="translate(78 57)" fill="none" stroke="#42d9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+      <circle cx="30" cy="30" r="27"/>
+      <path d="m17 30 9 9 18-20"/>
+    </g>
+    <text x="104" y="169" text-anchor="middle" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Contrôle final</text>
+    <text x="104" y="198" text-anchor="middle" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="104">Vérification et</tspan>
+      <tspan x="104" dy="19">ajustements utiles</tspan>
+    </text>
+  </g>
+</svg>

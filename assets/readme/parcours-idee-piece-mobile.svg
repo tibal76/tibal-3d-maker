@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="1080" viewBox="0 0 360 1080" role="img" aria-labelledby="title description">
+  <title id="title">De l'idée à la pièce</title>
+  <desc id="description">Cinq étapes verticales : votre besoin, l'étude technique, la conception CAO, l'impression 3D et le contrôle final.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#10243a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="360" height="1080" rx="20" fill="url(#background)"/>
+  <path d="M24 28h30" stroke="#42d9ff" stroke-width="3" stroke-linecap="round"/>
+  <text x="24" y="58" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="21" font-weight="750">DE L'IDÉE À LA PIÈCE</text>
+  <text x="24" y="82" fill="#9eb2c5" font-family="Inter, Segoe UI, sans-serif" font-size="12">Un parcours clair, jusqu'à la pièce sur mesure.</text>
+
+  <g fill="none" stroke="#42d9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M52 288v18m-5-5 5 5 5-5"/>
+    <path d="M52 480v18m-5-5 5 5 5-5"/>
+    <path d="M52 672v18m-5-5 5 5 5-5"/>
+    <path d="M52 864v18m-5-5 5 5 5-5"/>
+  </g>
+
+  <g transform="translate(20 118)">
+    <rect width="320" height="170" rx="15" fill="#0d2034" stroke="#24445c"/>
+    <circle cx="52" cy="85" r="27" fill="#102b42" stroke="#42d9ff" stroke-width="2"/>
+    <text x="52" y="90" text-anchor="middle" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="800">01</text>
+    <text x="98" y="70" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Votre besoin</text>
+    <text x="98" y="101" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="98">Usage, mesures et</tspan>
+      <tspan x="98" dy="19">photos utiles</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20 310)">
+    <rect width="320" height="170" rx="15" fill="#0d2034" stroke="#24445c"/>
+    <circle cx="52" cy="85" r="27" fill="#102b42" stroke="#42d9ff" stroke-width="2"/>
+    <text x="52" y="90" text-anchor="middle" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="800">02</text>
+    <text x="98" y="70" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Étude technique</text>
+    <text x="98" y="101" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="98">Faisabilité, matière</tspan>
+      <tspan x="98" dy="19">et contraintes</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20 502)">
+    <rect width="320" height="170" rx="15" fill="#0d2034" stroke="#24445c"/>
+    <circle cx="52" cy="85" r="27" fill="#102b42" stroke="#42d9ff" stroke-width="2"/>
+    <text x="52" y="90" text-anchor="middle" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="800">03</text>
+    <text x="98" y="70" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Conception CAO</text>
+    <text x="98" y="101" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="98">Modèle précis sur</tspan>
+      <tspan x="98" dy="19">Fusion 360</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20 694)">
+    <rect width="320" height="170" rx="15" fill="#0d2034" stroke="#24445c"/>
+    <circle cx="52" cy="85" r="27" fill="#102b42" stroke="#42d9ff" stroke-width="2"/>
+    <text x="52" y="90" text-anchor="middle" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="800">04</text>
+    <text x="98" y="70" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Impression 3D</text>
+    <text x="98" y="101" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="98">Préparation et</tspan>
+      <tspan x="98" dy="19">fabrication</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20 886)">
+    <rect width="320" height="170" rx="15" fill="#0d2034" stroke="#24445c"/>
+    <circle cx="52" cy="85" r="27" fill="#102b42" stroke="#42d9ff" stroke-width="2"/>
+    <text x="52" y="90" text-anchor="middle" fill="#42d9ff" font-family="Inter, Segoe UI, sans-serif" font-size="13" font-weight="800">05</text>
+    <text x="98" y="70" fill="#ffffff" font-family="Inter, Segoe UI, sans-serif" font-size="17" font-weight="700">Contrôle final</text>
+    <text x="98" y="101" fill="#a9bbcc" font-family="Inter, Segoe UI, sans-serif" font-size="13">
+      <tspan x="98">Vérification et</tspan>
+      <tspan x="98" dy="19">ajustements utiles</tspan>
+    </text>
+  </g>
+</svg>
