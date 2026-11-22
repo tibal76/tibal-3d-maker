@@ -82,11 +82,12 @@ textarea {
 }
 
 .site-header {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
   z-index: 30;
+  background: var(--ink);
   color: var(--white);
   border-bottom: 1px solid rgba(255, 255, 255, 0.11);
 }
@@ -190,7 +191,6 @@ textarea {
 }
 
 .hero {
-  min-height: 760px;
   overflow: hidden;
   background:
     radial-gradient(circle at 78% 44%, rgba(66, 217, 255, 0.14), transparent 26%),
@@ -199,19 +199,21 @@ textarea {
 }
 
 .hero-grid {
-  display: grid;
-  min-height: 760px;
-  grid-template-columns: 1.08fr 0.92fr;
-  align-items: center;
-  gap: 44px;
-  padding-top: 82px;
+  display: flex;
+  width: 100%;
+  max-width: none;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 650px;
-  padding: 78px 0 54px;
+  width: min(var(--container), calc(100% - 48px));
+  max-width: none;
+  margin-inline: auto;
+  padding: 52px 0 58px;
 }
 
 .eyebrow,
@@ -333,24 +335,55 @@ textarea {
   font-size: 0.72rem;
 }
 
+@media (min-width: 721px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  .eyebrow {
+    justify-content: center;
+  }
+
+  .hero h1,
+  .hero-lead {
+    margin-inline: auto;
+  }
+
+  .hero h1 {
+    max-width: 850px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-skill,
+  .hero-proof {
+    margin-inline: auto;
+  }
+
+  .hero-proof {
+    text-align: center;
+  }
+
+  .hero-proof li,
+  .hero-proof li:not(:first-child) {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
 .hero-visual {
   position: relative;
-  min-height: 570px;
-  align-self: end;
+  order: -1;
+  width: 100%;
+  height: clamp(230px, 28vw, 430px);
 }
 
 .visual-frame {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: min(100%, 560px);
-  height: auto;
-  aspect-ratio: 1824 / 576;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  border: 1px solid rgba(66, 217, 255, 0.18);
-  border-radius: 14px;
-  box-shadow: 0 0 80px rgba(66, 217, 255, 0.09);
-  transform: translateY(-50%);
 }
 
 .visual-frame::after {
@@ -366,28 +399,22 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-.floating-tag {
-  position: absolute;
-  z-index: 3;
+.hero-skill {
   display: flex;
+  width: fit-content;
   align-items: center;
   gap: 10px;
+  margin-top: 24px;
   border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 7px;
   background: rgba(7, 17, 31, 0.88);
-  backdrop-filter: blur(12px);
   color: #dce8f2;
   font-size: 0.73rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
-}
-
-.tag-top {
-  top: -36px;
-  right: -20px;
   padding: 12px 16px;
 }
 
@@ -397,22 +424,6 @@ textarea {
   border-radius: 50%;
   background: var(--cyan);
   box-shadow: 0 0 12px var(--cyan);
-}
-
-.tag-bottom {
-  bottom: 52px;
-  left: 10px;
-  padding: 9px 16px 9px 9px;
-}
-
-.tag-index {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 5px;
-  background: var(--cyan);
-  color: var(--ink);
 }
 
 .trust-strip {
@@ -1112,18 +1123,6 @@ textarea {
     display: block;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr 0.72fr;
-  }
-
-  .visual-frame {
-    right: 0;
-  }
-
-  .tag-top {
-    right: 0;
-  }
-
   .expertise-grid {
     grid-template-columns: 1fr;
   }
@@ -1165,6 +1164,11 @@ textarea {
 }
 
 @media (max-width: 720px) {
+  .site-header {
+    position: absolute;
+    background: transparent;
+  }
+
   .container {
     width: min(100% - 32px, var(--container));
   }
@@ -1189,9 +1193,14 @@ textarea {
 
   .hero-grid {
     display: block;
+    width: min(100% - 32px, var(--container));
+    max-width: var(--container);
+    margin-inline: auto;
   }
 
   .hero-content {
+    width: auto;
+    margin-inline: 0;
     padding: 88px 0 32px;
   }
 
@@ -1203,27 +1212,22 @@ textarea {
     font-size: 1rem;
   }
 
+  .hero-skill {
+    display: none;
+  }
+
   .hero-visual {
     display: block;
     min-height: 0;
+    height: auto;
     margin-top: 16px;
   }
 
   .visual-frame {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
     width: 100%;
     max-width: 560px;
     aspect-ratio: 968 / 720;
     margin-inline: auto;
-    transform: none;
-  }
-
-  .tag-top,
-  .tag-bottom {
-    display: none;
   }
 
   .hero-proof {
