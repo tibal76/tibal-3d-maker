@@ -1,6 +1,8 @@
 const SITE_CONFIG = {
   email: "tibal76@proton.me",
   formEndpoint: "https://formsubmit.co/ajax/tibal76@proton.me",
+  instagramUrl: "https://www.instagram.com/tibal.3d.maker/",
+  facebookUrl: "https://www.facebook.com/tibal.3d.maker/",
   tiktokUrl: "https://www.tiktok.com/@tibal.3d.maker"
 };
 
