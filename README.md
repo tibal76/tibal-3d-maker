@@ -62,7 +62,7 @@ Paire de supports triangulaires en PETG conçus sur mesure. Ils accueillent une 
 
 ### Présentoir DVD
 
-Organisation pratique d'une collection avec une fabrication adaptée à l'espace disponible.
+Présentoir sur mesure pour maintenir un boîtier de DVD en position verticale, imprimé en PLA noir mat.
 
 ### Cadre lithophane
 
