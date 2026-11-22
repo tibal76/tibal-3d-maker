@@ -157,6 +157,58 @@ textarea {
   color: var(--cyan);
 }
 
+.nav-socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-link {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  color: #c6d3df;
+  transition: 180ms ease;
+}
+
+.social-link-facebook {
+  border-color: #1877f2;
+  background: #1877f2;
+  color: var(--white);
+}
+
+.social-link-instagram {
+  border-color: rgba(228, 64, 95, 0.55);
+  color: #e4405f;
+}
+
+.social-link-tiktok {
+  border-color: rgba(37, 244, 238, 0.55);
+  color: #25f4ee;
+}
+
+.social-link-facebook:hover {
+  background: #166fe5;
+}
+
+.social-link-tiktok svg {
+  filter: drop-shadow(-1px 0 #fe2c55);
+}
+
+.social-link:hover {
+  background: rgba(66, 217, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 .nav-cta {
   padding: 12px 17px;
   border: 1px solid rgba(66, 217, 255, 0.55);
@@ -1112,6 +1164,19 @@ textarea {
 
   .nav a {
     padding: 13px 12px;
+  }
+
+  .nav-socials {
+    justify-content: center;
+    margin: 8px 0;
+    border-block: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+  }
+
+  .nav .social-link {
+    width: 40px;
+    height: 40px;
+    padding: 0;
   }
 
   .nav-cta {
