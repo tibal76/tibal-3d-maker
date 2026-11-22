@@ -625,6 +625,38 @@ textarea {
   background-size: 38px 38px, 38px 38px, auto;
 }
 
+.project-photo {
+  background: #0d1e30;
+}
+
+.project-photo-main {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-photo-inset {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: min(38%, 260px);
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  margin: 0;
+  border: 3px solid #fff;
+  border-radius: 8px;
+  background: #f3f4f5;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.project-photo-inset img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .cad-label {
   position: absolute;
   right: 16px;
@@ -633,38 +665,6 @@ textarea {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.62rem;
   letter-spacing: 0.12em;
-}
-
-.project-lines {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 230px;
-  height: 145px;
-  border: 3px solid var(--cyan);
-  border-radius: 18px;
-  transform: translate(-50%, -50%) skewY(-8deg);
-  box-shadow: 0 0 24px rgba(66, 217, 255, 0.24), inset 0 0 24px rgba(66, 217, 255, 0.08);
-}
-
-.project-lines::before,
-.project-lines::after {
-  content: "";
-  position: absolute;
-  border: 2px solid #69aaff;
-  border-radius: 12px;
-}
-
-.project-lines::before {
-  inset: 32px -54px 32px 54px;
-}
-
-.project-lines::after {
-  width: 64px;
-  height: 64px;
-  right: -83px;
-  bottom: -68px;
-  border-radius: 50%;
 }
 
 .dvd-discs {
@@ -1281,6 +1281,13 @@ textarea {
     grid-template-rows: 300px auto;
   }
 
+  .project-photo-inset {
+    right: 12px;
+    bottom: 12px;
+    width: min(42%, 220px);
+    border-width: 2px;
+  }
+
   .project-card:not(.project-featured) {
     grid-template-rows: 230px auto;
   }
@@ -1336,6 +1343,10 @@ textarea {
 }
 
 @media (max-width: 420px) {
+  .project-featured {
+    grid-template-rows: 220px auto;
+  }
+
   .brand small {
     display: none;
   }
