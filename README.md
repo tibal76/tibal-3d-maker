@@ -122,15 +122,39 @@ Pour présenter un projet en amont du lancement, indique :
 
 Ce dépôt contient le site statique publié avec GitHub Pages :
 
-- `index.html` — contenu, navigation et formulaire
-- `css/style.css` — mise en page et styles responsive
-- `js/script.js` — filtres, menu mobile, retour en haut et formulaire
-- `assets/logo/` — logo et bannières ordinateur/mobile
-- `assets/realizations/` — visuels des réalisations
-- `assets/readme/` — infographie du parcours projet
-- `mentions-legales.html` et `confidentialite.html` — informations du site et traitement des demandes
+```text
+tibal-3d-maker/
+├── index.html
+├── mentions-legales.html
+├── confidentialite.html
+├── README.md
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── assets/
+│   ├── logo/
+│   ├── realizations/
+│   └── readme/
+└── .github/
+    └── copilot-instructions.md
+```
 
-Le site utilise HTML, CSS et JavaScript natifs, sans framework ni étape de compilation. Les documents de gestion privés restent exclus du dépôt.
+Le site utilise HTML, CSS et JavaScript natifs, sans framework ni étape de compilation. `gestion-privee/` et `.venv/` sont exclus du dépôt public par `.gitignore`. Les outils 3D possèdent leur propre dépôt privé ; ne copiez pas de documents de gestion ou d'assets privés dans le dépôt public.
+
+### Identité visuelle
+
+La documentation reprend la bannière du site et les couleurs définies dans `css/style.css` : bleu nuit `#07111f`, cyan `#42d9ff`, bleu `#3d7cff` et orange `#ff8a4c`. Le site associe ces accents à des fonds clairs et à une typographie système sans empattement.
+
+### Lancement et vérification
+
+Depuis la racine du site :
+
+```powershell
+python -m http.server 8000
+```
+
+Ouvrez `http://localhost:8000/`. Vérifiez les pages d'informations, la galerie, le formulaire, la navigation et les affichages mobile et ordinateur. Le formulaire prépare un message dans la messagerie du visiteur ; il ne transmet pas directement de données au site. Il n'y a pas de compilation ni de suite de tests automatisée dans ce dépôt.
 
 ## Droits sur les contenus
 
