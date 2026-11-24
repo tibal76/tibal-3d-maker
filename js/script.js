@@ -34,19 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateHeader, { passive: true });
 
   if (menuToggle && nav) {
+    const srOnlyText = menuToggle.querySelector(".sr-only");
+    
     menuToggle.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.querySelector(".sr-only").textContent = isOpen
-        ? "Fermer le menu"
-        : "Ouvrir le menu";
+      
+      if (srOnlyText) {
+        srOnlyText.textContent = isOpen ? "Fermer le menu" : "Ouvrir le menu";
+      }
     });
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         nav.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.querySelector(".sr-only").textContent = "Ouvrir le menu";
+        
+        if (srOnlyText) {
+          srOnlyText.textContent = "Ouvrir le menu";
+        }
       });
     });
   }
@@ -93,9 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
         `mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent(subject)}` +
         `&body=${encodeURIComponent(message)}`;
 
-      formStatus.classList.remove("error", "notice");
-      formStatus.textContent =
-        "Votre application de messagerie va s’ouvrir avec la demande préremplie. Ajoutez vos fichiers avant de l’envoyer.";
+      if (formStatus) {
+        formStatus.classList.remove("error", "notice");
+        formStatus.textContent =
+          "Votre application de messagerie va s'ouvrir avec la demande préremplie. Ajoutez vos fichiers avant de l'envoyer.";
+      }
+      
       window.location.href = mailtoUrl;
     });
   }
